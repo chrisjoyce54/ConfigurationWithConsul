@@ -22,7 +22,7 @@ namespace ConfigurationWithConsul
             .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production"}.json", optional: true)
             .Build();
 
-            var cancellationTokenSource = new CancellationTokenSource();
+            //var cancellationTokenSource = new CancellationTokenSource();
             var x = initConfig["Consul:Host"];
             WebHost
                 .CreateDefaultBuilder(args)
@@ -32,7 +32,7 @@ namespace ConfigurationWithConsul
                         builder
                             .AddConsul(
                                 "App1/appsettings.json",
-                                cancellationTokenSource.Token,
+                                //cancellationTokenSource.Token,
                                 options =>
                                 {
                                     options.ConsulConfigurationOptions =
@@ -51,7 +51,7 @@ namespace ConfigurationWithConsul
                 .UseStartup<Startup>()
                 .Build()
                 .Run();
-            cancellationTokenSource.Cancel();
+            //cancellationTokenSource.Cancel();
 		}
 	}
 }

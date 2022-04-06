@@ -23,7 +23,7 @@
     <PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
     <PackageReference Include="Serilog.Formatting.Compact" Version="1.1.0" />
     <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
-    <PackageReference Include="winton.Extensions.Configuration.Consul" Version="2.4.0" />
+    <PackageReference Include="winton.Extensions.Configuration.Consul" Version="3.2.0" />
   </ItemGroup>
 
 </Project>
