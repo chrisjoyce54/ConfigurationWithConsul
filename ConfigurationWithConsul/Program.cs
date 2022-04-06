@@ -31,7 +31,7 @@ namespace ConfigurationWithConsul
                     {
                         builder
                             .AddConsul(
-                                "App1/appsettings.json",
+                                $"{System.AppDomain.CurrentDomain.FriendlyName}/appsettings.json",
                                 //cancellationTokenSource.Token,
                                 options =>
                                 {
